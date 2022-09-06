@@ -33,8 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [live site]()
 
 ## My process
 
@@ -47,7 +46,7 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - BEM
-- Javascript
+- Javascript modules
 
 ### What I learned
 
@@ -98,9 +97,7 @@ Note that the use of import assertions  only works in browsers with support it a
 
 ### Useful resources
 
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [JS](https://developer.mozilla.org/en-US/docs/Web/javascript)
+- [import-export-javascript](https://javascript.info/import-export)
 - [Import-assertions](https://github.com/tc39/proposal-import-assertions)
 - [tagged-template](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 - [Dom parser](https://davidwalsh.name/convert-html-stings-dom-nodes)
@@ -113,4 +110,4 @@ Note that the use of import assertions  only works in browsers with support it a
 
 ## Acknowledgments
 
-  At some point instead of advancing I got stuck in certain things that I needed to know, this  [youtube video](https://www.youtube.com/watch?v=52q6OGbcIso&list=WL&index=2) the channel is called CodingTube .I really learned some things that I did not know and it helped me a lot to finish this challenge. As well as all the free resources on the internet, they very helpful.
+At some point while I was developing, I stopped moving forward and got stuck and I felt that I needed to learn another way to face this challenge I happily found this [CodingTube](https://www.youtube.com/watch?v=52q6OGbcIso&list=WL&index=2) youtube video that was of great help to advance and finish this challenge, as well as free resources on the internet to review concepts in javascript.
