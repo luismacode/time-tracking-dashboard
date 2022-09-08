@@ -1,6 +1,9 @@
-import json from "./data/data.json" assert { type: "json" };
+import { fetchJson } from "./helpers/fetchJson.js";
 import { html } from "./helpers/createHtml.js";
-import { render } from "./helpers/createNode.js";
+import { createNode } from "./helpers/createNode.js";
+
+const json = await fetchJson();
+
 const dailyData = json.map((item) => {
   const title = item.title;
   const timeframe = item.timeframes.daily;
@@ -23,37 +26,38 @@ const monthlyLink = document.getElementById("monthly");
 
 const views = document.getElementById("views");
 
-renderHtml(dailyData);
+render(dailyData);
 
 dailyLink.addEventListener("click", (e) => {
   e.preventDefault();
-  renderHtml(dailyData);
+  render(dailyData);
   dailyLink.classList.add("timeframe--active");
   weeklyLink.classList.remove("timeframe--active");
   monthlyLink.classList.remove("timeframe--active");
 });
 weeklyLink.addEventListener("click", (e) => {
   e.preventDefault();
-  renderHtml(weeklyData);
+  render(weeklyData);
   weeklyLink.classList.add("timeframe--active");
   dailyLink.classList.remove("timeframe--active");
   monthlyLink.classList.remove("timeframe--active");
 });
 monthlyLink.addEventListener("click", (e) => {
   e.preventDefault();
-  renderHtml(monthlyData);
+  render(monthlyData);
   monthlyLink.classList.add("timeframe--active");
   dailyLink.classList.remove("timeframe--active");
   weeklyLink.classList.remove("timeframe--active");
 });
 
-function renderHtml(data) {
+function render(data) {
   if (views.firstElementChild) {
     views.removeChild(views.firstElementChild);
   }
   const view = document.createElement("div");
   view.className = "view";
   views.appendChild(view);
+
   data.forEach((item) => {
     const template = html`
       <article
@@ -80,7 +84,8 @@ function renderHtml(data) {
         </div>
       </article>
     `(item);
-    const node = render(template);
+    const node = createNode(template);
     view.appendChild(node);
+    return view;
   });
 }
