@@ -52,10 +52,18 @@ Users should be able to:
 
 Through the development of this challenge I learned:
 
-1. Import a file with extension json into a javascript module:
+1. Import a json or get the json by performing a fetch in javascript
 
   ```js
     import json from '.data/data.json' assert {type:'json'};
+  ```
+
+  ```js
+    async function fetchJson() {
+     return fetch("src/data/data.json")
+    .then((res) => res.json())
+    .then((data) => data);
+  }
   ```
 
 2. Use a tagged template to generate a string containing Html elements.
@@ -70,7 +78,7 @@ Through the development of this challenge I learned:
       return temp.join("");
       };
     }
-```
+  ```
 
 3. Import and call the tagged function in the index file like this.
 
@@ -87,20 +95,21 @@ Through the development of this challenge I learned:
   ```js
       const node = new DOMParser().parseFromString(template, "text/html").body.firstElementChild;
       parentNode.appendChild(node)
-```
+  ```
 
 ### Continued development
 
-In the future I will do a separate project in vuejs or react of this same challenge to add support for all browsers.
-
 Note that the use of import assertions  only works in browsers with support it and at the time this challenge was finished is not supported in firefox. So if you run this code in firefox the user experience will be bad instead I recommend using google chrome or Microsoft Edge in its latest updated version.
+
+Taking into account the above I just updated this repository and changed the use of import assertion and only use fetch to get the data from the json file.
 
 ### Useful resources
 
 - [import-export-javascript](https://javascript.info/import-export)
 - [Import-assertions](https://github.com/tc39/proposal-import-assertions)
 - [tagged-template](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
-- [Dom parser](https://davidwalsh.name/convert-html-stings-dom-nodes)
+- [Dom-parser](https://davidwalsh.name/convert-html-stings-dom-nodes)
+- [fetch-with-Json](https://dmitripavlutin.com/fetch-with-json/)
 
 ## Author
 
