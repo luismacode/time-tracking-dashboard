@@ -71,8 +71,8 @@ function render(data) {
             <img
               src="images/icon-ellipsis.svg"
               alt="icon-ellipsis"
-              width="20px"
-              height="5px"
+              width="20"
+              height="5"
             />
           </div>
           <div class="card__hours">
