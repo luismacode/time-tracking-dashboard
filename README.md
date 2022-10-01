@@ -52,13 +52,13 @@ Users should be able to:
 
 Through the development of this challenge I learned:
 
-1. Import a json or get the json by performing a fetch in javascript
+- Import a json or get the json by performing a fetch in javascript
 
-  ```js
+ ```js
     import json from '.data/data.json' assert {type:'json'};
   ```
 
-  ```js
+ ```js
     async function fetchJson() {
      return fetch("src/data/data.json")
     .then((res) => res.json())
@@ -66,9 +66,9 @@ Through the development of this challenge I learned:
   }
   ```
 
-2. Use a tagged template to generate a string containing Html elements.
+- Use a tagged template to generate a string containing Html elements.
 
-  ```js
+```js
     function html(strings, ...keys) {
     return function () {
     const temp = strings.slice();
@@ -78,11 +78,11 @@ Through the development of this challenge I learned:
       return temp.join("");
       };
     }
-  ```
+ ```
 
-3. Import and call the tagged function in the index file like this.
+- Import and call the tagged function in the index file like this.
 
-  ```js
+```js
       const template = html`
       <article class="card">
         ........
@@ -90,12 +90,12 @@ Through the development of this challenge I learned:
     `(data);
 ```
 
-4. Convert a string template to a dom node to then add it as a child to the parent node.
+- Convert a string template to a dom node to then add it as a child to the parent node.
 
-  ```js
-      const node = new DOMParser().parseFromString(template, "text/html").body.firstElementChild;
-      parentNode.appendChild(node)
-  ```
+```js
+    const node = new DOMParser().parseFromString(template, "text/html").body.firstElementChild;
+    parentNode.appendChild(node)
+```
 
 ### Continued development
 
@@ -113,7 +113,7 @@ Taking into account the above I just updated this repository and changed the use
 
 ## Author
 
-- Linkedin - [luismachaca](www.linkedin.com/in/luismachaca)
+- Linkedin - [luismachaca](https://www.linkedin.com/in/luismachaca)
 - Frontend Mentor - [@luismacode](https://www.frontendmentor.io/profile/luismacode)
 - Twitter - [@luismacode](https://www.twitter.com/luismacode)
 
