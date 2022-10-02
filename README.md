@@ -33,6 +33,7 @@ Users should be able to:
 
 ### Links
 
+- Solution URL: [solution](https://www.frontendmentor.io/solutions/timetrackingdashboard-SExGTK0i0w)
 - Live Site URL: [live site](https://luismacode.github.io/time-tracking-dashboard/)
 
 ## My process
